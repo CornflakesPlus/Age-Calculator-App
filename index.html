@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Age calculator app</title>
 
@@ -14,24 +18,61 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
+
 <body>
+  <main>
+    <div class="form-input">
+      <form>
+        <ul>
+          <li class="check">
+            <label class="label" id="labelday" for="day">Day</label>
+            <input class="input inputday" type="text" id="inputDay" name="inputDay" placeholder="DD">
+            <span class="error" aria-live="polite"></span>
+          </li>
 
-  Day
-  DD
+          <li class="check">
+            <label class="label" id="labelmonth" for="month">Month</label>
+            <input class="input inputmonth" type="text" id="inputMonth" name="inputMonth" placeholder="MM">
+            <span class="error" aria-live="polite"></span>
+          </li>
 
-  Month
-  MM
+          <li class="check">
+            <label class="label" id="labelyear" for="year">Year</label>
+            <input class="input inputyear" type="text" id="inputYear" name="inputYear" placeholder="YYYY">
+            <span class="error" aria-live="polite"></span>
+          </li>
+        </ul>
 
-  Year
-  YYYY
+        <div class="button-parent">
+          <span class="horizontal-line"></span>
+          <button class="button" type="submit" id="button">
+            <img class="svg-image" src="assets/images/icon-arrow.svg" alt="" aria-hidden="true">
+          </button>
+        </div>
+      </form>
+    </div>
 
-  -- years
-  -- months
-  -- days
-  
+    <div class="output-parent">
+      <div class="output-firstchild">
+        <span class="output" id="outputYears">--</span>
+        <span class="output" id="outputMonths">--</span>
+        <span class="output" id="outputDays">--</span>
+      </div>
+
+      <div class="output-secondchild">
+        <p>years</p>
+        <p>months</p>
+        <p>days</p>
+      </div>
+      
+    </div>
+  </main>
+    
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">CornFlakes</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,207 @@
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<   BASE STYLES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html, body { 
+    height: 100%;
+}
+
+
+body {
+    background-color:hsl(0, 0%, 94%);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+
+body > .attribution {
+    position: sticky;
+    top: 100vh;
+}
+
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    padding: 3rem 1rem;
+    width: 90vw;
+    max-width: 28.125rem;
+    margin: 1rem auto;
+    overflow: hidden;
+    border-radius: 1rem 1rem 6rem;
+}
+
+
+input[type="text"] {
+    padding: .7rem;
+    width: 90%;
+    border: solid 2px black;
+    border-radius: .5rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+
+input[type="text"]:focus {
+    border: 2px solid hsl(259, 100%, 65%);
+    caret-color:hsl(259, 100%, 65%);
+  }
+
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< CLASS STYLES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.label {
+    display: block;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 8%);
+}
+
+
+.check {
+    list-style: none;
+}
+
+
+.svg-image {
+    background-color: hsl(259, 100%, 65%);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+
+.svg-image:hover {
+    background-color: hsl(0, 0%, 8%);
+    transition: ease 1s;
+    cursor: pointer;
+}
+
+
+::placeholder {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1rem;
+}
+
+
+.input:focus::placeholder {
+    color: hsl(259, 100%, 65%);
+}
+
+
+.input:hover {
+    cursor: pointer;
+}
+
+
+.output {
+    color: hsl(259, 100%, 65%);
+    width: 40px;
+    font-size: 2rem;
+}
+
+
+.button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+.button-parent {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 0;
+}
+
+
+.horizontal-line {
+    border-bottom: 2px solid grey;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+}
+
+
+.output-parent {
+    display: flex;
+}
+
+
+.output-firstchild {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+
+/* JavaScript targeted styles */
+
+.invalid {
+    border-color: #900;
+    background-color: #fdd;
+  }
+
+
+.error {
+    display: block;
+    font-size: .7rem;
+    font-style: italic;
+    color: hsl(0, 100%, 67%);
+    padding: .5rem;
+}
+
+/* ^^^^^^^^^^^^^^ */
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<< MEDIA QUERIES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+@media screen and (min-width: 50rem) {
+
+    main {
+        max-width: 35rem;
+    }
+
+    .output-secondchild {
+        font-size: 4rem;
+    }
+
+    .output {
+        width: 100px;
+        font-size: 4rem;
+    }
+    
+    .horizontal-line {
+        position: unset;
+        margin: auto 0;
+    
+    }
+
+}
+
+
+/* <<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>> */
